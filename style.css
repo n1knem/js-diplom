@@ -1,0 +1,166 @@
+*,html,body{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth
+}
+
+body{
+  min-height: 100vh;
+}
+
+section{
+  min-height: 100vh;
+}
+
+header{
+  background-color: #333;
+  box-shadow: 1px 1px 5px;
+  position: sticky;
+  top:0;
+  z-index: 100
+}
+
+header a{
+  color: whitesmoke;
+}
+
+header nav{
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 0 auto;
+  padding: 5px;
+  align-items: center;
+}
+
+header ul{
+  display: flex;
+}
+
+header ul li{
+  padding: 5px;
+}
+
+header ul li a:hover{
+  color:red;
+}
+
+header .logo-cover{
+  width: 25px;
+  height: 25px;
+  display: block;
+  background-color: red;
+  object-fit: cover;
+}
+
+
+.skins{
+  --count:3;
+  --gap:0.5;
+  --width:95;
+  --min-heigth:30;
+  display: grid;
+  grid-template-columns: repeat(var(--count), 1fr);
+  grid-gap: calc(var(--gap) * 1em + 1vw);
+  padding: calc(var(--gap) * 1em + 1vw);
+  font-size: calc(var(--gap) * 1em + 1vw);
+  width: calc(var(--width) * 1%);
+  margin: 1em auto;
+  /* border: 1px solid blueviolet; */
+}
+
+@media screen and (max-width:800px){
+  .skins{
+    --count:2;
+    --min-heigth:40;
+  }
+}
+
+@media screen and (max-width:420px){
+  .skins{
+    --count:1;
+    --min-heigth:60;
+  }
+}
+
+
+.skin{
+  min-height: 30vh;
+  padding: calc(var(--gap) * 1em + 1vw);
+  box-shadow: 1px 1px 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.skin:hover {
+  box-shadow: 1px 1px 15px;
+  background-color:gray 
+}
+
+.skin:hover .skin-cover{
+  transform: scale(1.8)
+}
+
+.skin-cover{
+  background-color:#333;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height:calc(var(--min-heigth) * 1vh); 
+  transition: 0.4s;
+}
+
+.skin-price{
+  color: red;
+}
+
+
+
+
+.swiper-container {
+  width: 100%;
+  height: 85vh;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background-color: #333;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+
+.random-skin{
+  width: 95%;
+  margin: 0 auto;
+  min-height: 90vh;
+  background-color:red; 
+  cursor: pointer;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+   
+}
